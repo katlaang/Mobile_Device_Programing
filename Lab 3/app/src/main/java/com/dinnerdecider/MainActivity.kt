@@ -2,8 +2,10 @@ package com.dinnerdecider
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
-import kotlin.random.Random as Random1
+
 
 class MainActivity : AppCompatActivity() {
     val dinnerList= arrayListOf( "Hamburger", "Pizza", "Mexican", "American", "Chinese")
@@ -11,17 +13,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
     //clicklistener for decide button to select random food
-        decideBtn.setOnClickListener{
+        decideButton.setOnClickListener{
             val random= Random()
             val selectedRandomFood=random.nextInt(dinnerList.size)
             randomSelectedFood.text=dinnerList[selectedRandomFood]
 
         }
 
-        addFoodBtn.setOnClickListener {
+        addFoodButton.setOnClickListener {
             val newFood = addFoodTxt.text.toString()
-            foodList.add(newFood)
+            dinnerList.add(newFood)
             addFoodTxt.text.clear()
         }
     }
