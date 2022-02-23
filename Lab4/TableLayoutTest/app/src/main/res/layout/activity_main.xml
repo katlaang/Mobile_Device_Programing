@@ -5,25 +5,27 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
     android:stretchColumns="*">
-    <TableRow >
+    <TableRow  android:padding="5dip">
         <EditText
             android:inputType="numberDecimal"
             android:id="@+id/et1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="15sp"
+            android:textSize="18sp"
             android:hint="@string/enter_android_version"
              />
     </TableRow>
 
-    <TableRow >
+    <TableRow  android:padding="5dip" >
         <EditText
             android:inputType="text"
             android:id="@+id/et2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="15sp"
+            android:textSize="18sp"
             android:hint="@string/enter_android_code_name"
             />
     </TableRow>
@@ -33,7 +35,7 @@
             android:id="@+id/Addbtn"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="15sp"
+            android:textSize="18sp"
             android:inputType="text"
             android:text="@string/add"
             android:onClick="addRow"
@@ -44,19 +46,61 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/version"
-            android:background="#f0f0f0"
-            android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"/>
+            android:background="#B7C3D0"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+
+        />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/code_name"
-            android:background="#f8f8f8"
-            android:layout_marginTop="16dp"
-        android:layout_marginBottom="16dp"/>
+            android:textSize="18sp"
+            android:background="#F1F2F4"
+            android:layout_marginTop="20dp"
+        />
 
     </TableRow>
+    <TableRow>
+        <TextView
+            android:id="@+id/version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_8_0"
+            android:textSize="18sp"
+            android:background="#B7C3D0"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pie"
+            android:textSize="18sp"
+            android:background="#F1F2F4"
+            android:layout_marginTop="10dp"/>
+
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_9_0"
+            android:background="#B7C3D0"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/orec"
+            android:background="#F1F2F4"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"/>
+
+    </TableRow>
+
 
 
 
