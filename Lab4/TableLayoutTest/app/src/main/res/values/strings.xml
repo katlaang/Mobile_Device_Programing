@@ -9,4 +9,6 @@
     <string name="pie">Pie</string>
     <string name="_9_0">9.0</string>
     <string name="orec">Orec</string>
+    <string name="android_9_0">Android 9.0</string>
+    <string name="android_8_0">Android 8.0</string>
 </resources>
