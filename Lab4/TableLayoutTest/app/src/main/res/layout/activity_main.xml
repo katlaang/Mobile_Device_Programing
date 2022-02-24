@@ -48,6 +48,7 @@
             android:text="@string/version"
             android:background="@color/blue"
             android:gravity="bottom"
+            android:textColor="@color/white"
             android:textSize="18sp"
             android:layout_marginTop="20dp"
 
@@ -58,6 +59,7 @@
             android:layout_height="40dp"
             android:text="@string/code_name"
             android:textSize="18sp"
+            android:textColor="@color/white"
             android:gravity="bottom"
             android:background="@color/blue"
             android:layout_marginTop="20dp"
@@ -71,6 +73,7 @@
             android:layout_height="wrap_content"
             android:text="@string/android_9_0"
             android:textSize="20sp"
+            android:textColor="@color/white"
             android:background="@color/version_row_color"
             android:layout_marginTop="10dp"/>
 
@@ -79,6 +82,7 @@
             android:layout_height="wrap_content"
             android:text="@string/pie"
             android:textSize="20sp"
+            android:textColor="@color/black"
             android:background="@color/code_row_color"
             android:layout_marginTop="10dp"/>
 
@@ -91,6 +95,7 @@
             android:text="@string/android_8_0"
             android:background="@color/version_row_color"
             android:textSize="18sp"
+            android:textColor="@color/white"
             android:layout_marginTop="10dp"/>
 
         <TextView
@@ -99,7 +104,9 @@
             android:text="@string/orec"
             android:background="@color/code_row_color"
             android:textSize="18sp"
-            android:layout_marginTop="10dp"/>
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
 
     </TableRow>
 </TableLayout>
