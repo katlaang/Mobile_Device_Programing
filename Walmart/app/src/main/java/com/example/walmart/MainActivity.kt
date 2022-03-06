@@ -64,23 +64,19 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun getPassword(view: View){
-        if(tv4.text.isNotEmpty()){
-            var pass:String? = null
-            for(i in users){
-                if(i.userName==et1.text.toString()){
-                    pass = i.password
-                    break
-                }
-            }
-            if(pass != null){
-                val intent = Intent()
-                intent.action = Intent.ACTION_SEND
-                intent.type = "text/plain"
-                intent.putExtra(Intent.EXTRA_TEXT, pass)
-                startActivity(intent)
-            }
+    fun forgetPassword(view: View){
+        var userName = et1.text.toString()
+        var password = et2.text.toString()
+
+        if(!userName.equals("") && !password.equals("")){
+            val intent = Intent()
+            intent.action = Intent.ACTION_SEND
+            intent.putExtra("Password", password)
+            intent.type = "text/plain"
+            startActivity((Intent.createChooser(intent, "Password sent to your email address")))
+        }  else {
+            Toast.makeText(this, "Email or Password does not match", Toast.LENGTH_SHORT).show()
         }
     }
+    }
 
-}
