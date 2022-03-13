@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity"
+    android:layout_marginStart="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please answer these questions from Kotlin Fundamentals"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <TextView
+            android:id="@+id/quiz1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="which keyword is used to declare an immutable variable in Kotlin?"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText"/>
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="val"
+                tools:ignore="HardcodedText" />
+
+            <RadioButton
+                android:id="@+id/rb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="var"
+                tools:ignore="HardcodedText" />
+        </RadioGroup>
+
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <TextView
+            android:id="@+id/quiz2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What is the default modifier in Kotlin?"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <CheckBox
+            android:id="@+id/priv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="protected"
+            tools:ignore="HardcodedText">
+
+        </CheckBox>
+
+        <CheckBox
+            android:id="@+id/prot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="private"
+            tools:ignore="HardcodedText">
+
+        </CheckBox>
+
+
+        <CheckBox
+            android:id="@+id/pub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="public"
+            tools:ignore="HardcodedText">
+
+        </CheckBox>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="80dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="80dp"
+                android:onClick="submit"
+                android:text="Submit"
+                tools:ignore="HardcodedText">
+
+            </Button>
+
+            <Button
+                android:id="@+id/reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="reset"
+                android:text="Reset"
+                tools:ignore="HardcodedText">
+
+            </Button>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
