@@ -17,13 +17,13 @@ class Register : AppCompatActivity() {
     }
 
     fun createUser(view: View) {
-        var fName: String = et1.text.toString()
-        var lName: String = et2.text.toString()
-        var email: String = et3.text.toString()
-        var password: String = et4.text.toString()
+        val fName: String = et1.text.toString()
+        val lName: String = et2.text.toString()
+        val email: String = et3.text.toString()
+        val password: String = et4.text.toString()
         if(fName.isNotEmpty() && lName.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()){
         //   var newUser= User(fName, lName, email, password)
-            var resultIntent=Intent()
+            val resultIntent=Intent()
        //     resultIntent.putExtra("newUser", newUser)
             resultIntent.putExtra("email", email)
             resultIntent.putExtra("password", password)

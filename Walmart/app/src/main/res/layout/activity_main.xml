@@ -89,7 +89,7 @@
         android:layout_marginStart="220dp"
         android:autoLink="all"
         android:clickable="true"
-        android:onClick="getPassword"
+        android:onClick="forgetPassword"
         android:text="@string/forgot_password"
         android:textSize="20sp"
 
