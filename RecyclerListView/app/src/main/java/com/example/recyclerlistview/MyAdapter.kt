@@ -20,8 +20,7 @@ class MyAdapter(var context:Context, var product:ArrayList<Product>) : RecyclerV
 
         holder.parentlayout.setOnClickListener {
             val intent = Intent(context, ProductDetail::class.java)
-            var res = product[position]
-            //Toast.makeText(context," $res clicked",Toast.LENGTH_LONG).show()
+           // var res = product[position]
             intent.putExtra("product", product[position])
             context.startActivity(intent)
         }

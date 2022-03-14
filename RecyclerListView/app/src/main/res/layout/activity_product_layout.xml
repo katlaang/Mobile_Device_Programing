@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:padding="20dp"
     android:id="@+id/card_view"
-    app:cardBackgroundColor="#e4b9f1"
+    app:cardBackgroundColor="#D3D3D3"
     app:cardCornerRadius="12dp"
     android:layout_marginBottom="4dp">
 
@@ -46,6 +46,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="99dp"
+            android:layout_toEndOf="@+id/imageView"
             android:text="TextView"
             android:textColor="#00F"
             android:textSize="18sp"
