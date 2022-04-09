@@ -32,9 +32,9 @@ class MainActivity : AppCompatActivity() {
         viewPagerAdapter.addFragment(Education(), "Education")
         viewPagerAdapter.addFragment(Skills(), "Skills")
         viewPagerAdapter.addFragment(Work(), "Work")
-        viewPagerAdapter.addFragment(Hobbies(), "Hobbies")
-        viewPagerAdapter.addFragment(References(), "References")
-        viewPagerAdapter.addFragment(Contact(), "Contact")
+//        viewPagerAdapter.addFragment(Hobbies(), "Hobbies")
+//        viewPagerAdapter.addFragment(References(), "References")
+//        viewPagerAdapter.addFragment(Contact(), "Contact")
 
         viewPager.adapter=viewPagerAdapter
     }
