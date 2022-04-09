@@ -4,24 +4,53 @@
     tools:context=".MainActivity">
 
     <item
+        android:id="@+id/action_home"
+        android:orderInCategory="100"
+        android:title="Home"
+        android:icon="@drawable/icon_home"
+        tools:ignore="HardcodedText"/>
+
+    <item
+        android:id="@+id/action_education"
+        android:orderInCategory="100"
+        android:title="Education"
+        android:icon="@drawable/icon_education"
+        tools:ignore="HardcodedText"/>
+
+    <item
+        android:id="@+id/action_skills"
+        android:orderInCategory="100"
+        android:title="Skills"
+        android:icon="@drawable/icon_skills"
+        tools:ignore="HardcodedText"/>
+
+    <item
+        android:id="@+id/action_work"
+        android:orderInCategory="100"
+        android:title="Work"
+        android:icon="@drawable/icon_work"
+        tools:ignore="HardcodedText"/>
+
+    <item
+        android:id="@+id/action_hobbies"
+        android:orderInCategory="100"
+        android:title="Hobbies"
+        android:icon="@drawable/icon_hobbies"
+        tools:ignore="HardcodedText"/>
+
+    <item
         android:id="@+id/action_contact"
         android:orderInCategory="100"
         android:title="Contact Me"
-        app:showAsAction="never|ifRoom"
+        android:icon="@drawable/icon_contact"
         tools:ignore="HardcodedText"/>
 
     <item
         android:id="@+id/action_references"
         android:orderInCategory="100"
         android:title="References"
-        app:showAsAction="never|ifRoom"
+        android:icon="@drawable/icon_references"
         tools:ignore="HardcodedText"/>
-    <item
-        android:id="@+id/action_hobbies"
-        android:orderInCategory="100"
-        android:title="Hobbies"
-        app:showAsAction="never|ifRoom"
-        android:icon="@drawable/company_1_logo"
-        tools:ignore="HardcodedText"/>
+
 
 </menu>
