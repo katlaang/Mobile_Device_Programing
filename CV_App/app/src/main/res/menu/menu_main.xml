@@ -5,22 +5,22 @@
 
     <item
         android:id="@+id/action_contact"
-        android:orderInCategory="100"
+        android:orderInCategory="1"
         android:title="Contact Me"
-        app:showAsAction="never|ifRoom"
+        app:showAsAction="never"
         tools:ignore="HardcodedText"/>
 
     <item
         android:id="@+id/action_references"
-        android:orderInCategory="100"
+        android:orderInCategory="2"
         android:title="References"
-        app:showAsAction="never|ifRoom"
+        app:showAsAction="never"
         tools:ignore="HardcodedText"/>
     <item
         android:id="@+id/action_hobbies"
-        android:orderInCategory="100"
+        android:orderInCategory="3"
         android:title="Hobbies"
-        app:showAsAction="never|ifRoom"
+        app:showAsAction="never"
         android:icon="@drawable/company_1_logo"
         tools:ignore="HardcodedText"/>
 
