@@ -10,8 +10,8 @@
         app:showAsAction="never"
         tools:ignore="HardcodedText" />
 
-    <item
     <!--should be education-->
+    <item
         android:id="@+id/action_aboutme"
         android:orderInCategory="100"
         android:title="AboutMe"
