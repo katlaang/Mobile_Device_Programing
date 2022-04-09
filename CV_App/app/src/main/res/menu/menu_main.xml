@@ -33,7 +33,7 @@
 
     <item
         android:id="@+id/action_hobbies"
-        android:orderInCategory="100"
+        android:orderInCategory="3"
         android:title="Hobbies"
         android:icon="@drawable/icon_hobbies"
         tools:ignore="HardcodedText"/>
