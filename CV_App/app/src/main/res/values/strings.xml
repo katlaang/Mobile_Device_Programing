@@ -3,7 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    <string name="my_name"> PHEAKDEY LUK </string>
+    <string name="my_name">Eunice Kamau </string>
     <string name="job_title"> Software Engineer </string>
 
     <!-- About me -->
@@ -57,6 +57,9 @@ and HTML, JavaScript, CSS, Query, Angular7, and Bootstrap for front-end, and MyS
     <string name="personal">  Contact </string>
     <string name="personal_title"> Personal Info </string>
     <string name="personal_desc"> +1 (703) 474-6127 | luk.pheakdey@gmail.com </string>
+    <string name="location">location</string>
+    <string name="chicago_illinois_united_states">Chicago, Illinois, United States</string>
+    <string name="chicago_illinois">Chicago, Illinois</string>
 
 
 </resources>

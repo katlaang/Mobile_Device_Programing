@@ -37,6 +37,6 @@ class Education : Fragment() {
         return inflater.inflate(R.layout.fragment_education, container, false)
     }
 
-    
+
 
 }
