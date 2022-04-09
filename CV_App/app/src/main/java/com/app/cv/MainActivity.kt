@@ -45,9 +45,9 @@ class MainActivity : AppCompatActivity() {
         tabLayout.getTabAt(1)!!.setIcon(R.drawable.icon_education)
         tabLayout.getTabAt(2)!!.setIcon(R.drawable.icon_skills)
         tabLayout.getTabAt(3)!!.setIcon(R.drawable.icon_work)
-        tabLayout.getTabAt(4)!!.setIcon(R.drawable.icon_hobbies)
+/*        tabLayout.getTabAt(4)!!.setIcon(R.drawable.icon_hobbies)
         tabLayout.getTabAt(5)!!.setIcon(R.drawable.icon_references)
-        tabLayout.getTabAt(6)!!.setIcon(R.drawable.icon_contact)
+        tabLayout.getTabAt(6)!!.setIcon(R.drawable.icon_contact)*/
     }
 
     @SuppressLint("RestrictedApi")
