@@ -4,49 +4,24 @@
     tools:context=".MainActivity">
 
     <item
-        android:id="@+id/action_home"
-        android:orderInCategory="100"
-        android:title="Home"
-        app:showAsAction="never"
-        tools:ignore="HardcodedText" />
-
-    <!--should be education-->
-    <item
-        android:id="@+id/action_aboutme"
-        android:orderInCategory="100"
-        android:title="AboutMe"
-        app:showAsAction="never"
-        tools:ignore="HardcodedText"/>
-
-    <item
-        android:id="@+id/action_work"
-        android:orderInCategory="100"
-        android:title="Work"
-        app:showAsAction="never"
-        tools:ignore="HardcodedText"/>
-    <item
         android:id="@+id/action_contact"
         android:orderInCategory="100"
         android:title="Contact Me"
-        app:showAsAction="never"
+        app:showAsAction="never|ifRoom"
         tools:ignore="HardcodedText"/>
-    <item
-        android:id="@+id/action_languages"
-        android:orderInCategory="100"
-        android:title="Languages"
-        app:showAsAction="never"
-        tools:ignore="HardcodedText"/>
+
     <item
         android:id="@+id/action_references"
         android:orderInCategory="100"
         android:title="References"
-        app:showAsAction="never"
+        app:showAsAction="never|ifRoom"
         tools:ignore="HardcodedText"/>
     <item
         android:id="@+id/action_hobbies"
         android:orderInCategory="100"
         android:title="Hobbies"
-        app:showAsAction="never"
+        app:showAsAction="never|ifRoom"
+        android:icon="@drawable/company_1_logo"
         tools:ignore="HardcodedText"/>
 
 </menu>
