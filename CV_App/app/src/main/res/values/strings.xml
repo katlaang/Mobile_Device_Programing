@@ -5,31 +5,6 @@
 
     <string name="my_name">Eunice Kamau </string>
     <string name="job_title"> Software Engineer </string>
-
-    <!-- About me -->
-    <string name="master_school"> Maharishi International University </string>
-    <string name="master_skill"> Master Degree of Computer Science </string>
-    <string name="bachelor_school"> University of Pune </string>
-    <string name="bachelor_skill">  Bachelor Degree of Computer Science </string>
-    <string name="about_me"> I am a full stack developer in PHP with over Five-year experience in the E-commerce, health care and stock product domain. I used Magento2, CakePHP, Zend, and Laravel framework for backend. Moreover, I use raw PHP and Laravel to create web service API.
-and HTML, JavaScript, CSS, Query, Angular7, and Bootstrap for front-end, and MySQL for a database</string>
-
-    <!-- Work Experience -->
-    <string name="company_1"> Wattanak Inc, </string>
-    <string name="position_1"> Software Engineer </string>
-    <string name="project_title_1"> Magento2 Demo </string>
-    <string name="desc_project_1"> E-commerce Magento2 </string>
-
-    <string name="company_2">  UDAYA Technology Co, Ltd</string>
-    <string name="position_2"> Senior Full Stack Developer </string>
-    <string name="project_title_2"> EMR (Electric Media Record) </string>
-    <string name="desc_project_2"> Web-base application for heath care </string>
-
-    <string name="company_3"> SDIGIT </string>
-    <string name="position_3"> Web Developer </string>
-    <string name="project_title_3"> Dynamor </string>
-    <string name="desc_project_3"> Dynamic web application that auto generate UI using Zend framework </string>
-
     <!-- Contact -->
     <string name="strength"> Strengths </string>
     <string name="strength_title"> Personal Strength </string>
@@ -85,4 +60,7 @@ and HTML, JavaScript, CSS, Query, Angular7, and Bootstrap for front-end, and MyS
     <string name="add_new_skill">Add new skill</string>
     <string name="add_new">Add new skill</string>
     <string name="cancel">Cancel</string>
+    <string name="references">References</string>
+    <string name="john_smith_randal">John Smith Randal</string>
+    <string name="ref1">+1-(231) -456 -789</string>
 </resources>

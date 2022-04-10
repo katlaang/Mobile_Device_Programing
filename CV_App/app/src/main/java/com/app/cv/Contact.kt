@@ -45,7 +45,7 @@ class Contact : Fragment() {
         view.website.setOnClickListener {
             var webView: WebView = view.findViewById(R.id.web)
 
-            webView.loadUrl("http://www.google.com");
+            webView.loadUrl("https://fi.linkedin.com/in/teemu-myllynen-b0a14283");
 
             webView.settings.javaScriptEnabled = true;
 
