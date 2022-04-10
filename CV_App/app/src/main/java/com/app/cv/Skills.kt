@@ -56,12 +56,12 @@ class Skills : Fragment() {
                 skills.add(skill)
                 mAlertDialog.dismiss()
                 listViewAdapter.notifyDataSetChanged()
-                Toast.makeText(requireContext(), "Added into List ${ skill }", Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(), "New skill ${ skill } added", Toast.LENGTH_LONG).show()
             }
 
             mDialogView.btn_cancel.setOnClickListener {
                 mAlertDialog.dismiss()
-                Toast.makeText(requireContext(), "Dismiss", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Adding skill cancelled", Toast.LENGTH_SHORT).show()
             }
         }
         

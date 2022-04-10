@@ -19,7 +19,7 @@
         app:startIconTint="@color/black"
         app:endIconMode="clear_text"
         app:endIconTint="@color/black"
-        app:startIconDrawable="@drawable/icon_add_skill">
+        app:startIconDrawable="@drawable/icon_add_new_skill">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_add_new_skill"
