@@ -46,9 +46,9 @@ class Skills : Fragment() {
 
         view.btn_add_new_skill.setOnClickListener {
             var skill:String = view.et_add_new_skill.text.toString()
-            Skills().skills.add(skill)
+            skills.add(skill)
             listViewAdapter.notifyDataSetChanged()
-            Toast.makeText(requireContext(), "Added into List ${ skill }", Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(), "Added into List $skill", Toast.LENGTH_LONG).show()
         }
 
         listView.adapter = listViewAdapter

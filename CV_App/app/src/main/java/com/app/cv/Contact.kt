@@ -29,15 +29,7 @@ class Contact : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view=inflater.inflate(R.layout.activity_main,container, false )
-        toolbar.inflateMenu(R.menu.menu_main)
-       // toolbar.setOnMenuItemClickListener{
-//            if(it.itemId==R.id.action_contact){
-//
-//            }
-     //   }
-        // Inflate the layout for this fragment
-        return view
+    return inflater.inflate(R.layout.fragment_contact, container, false)
     }
 
 }
