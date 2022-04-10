@@ -76,7 +76,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/icon_mall" />
+                    android:src="@drawable/icon_mail" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -110,7 +110,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/icon_website" />
+                    android:src="@drawable/ic_website_48" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

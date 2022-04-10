@@ -16,7 +16,7 @@
         <activity
             android:name=".ReferencesActivity"
             android:exported="false"
-            android:label="References Activity"
+            android:label="References"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -25,7 +25,7 @@
         <activity
             android:name=".HobbiesActivity"
             android:exported="false"
-            android:label="Hobbies Activity"
+            android:label="Hobbies"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -35,7 +35,7 @@
         <activity
             android:name=".ContactActivity"
             android:exported="false"
-            android:label="Contact Activity"
+            android:label="Contact Me"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

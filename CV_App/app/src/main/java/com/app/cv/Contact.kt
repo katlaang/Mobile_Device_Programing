@@ -1,7 +1,9 @@
 package com.app.cv
 
-import android.app.AlertDialog
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +11,7 @@ import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_contact.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.add_new_skill_layout.view.*
 import kotlinx.android.synthetic.main.fragment_contact.view.*
@@ -32,6 +35,7 @@ class Contact : Fragment() {
 
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -40,10 +44,10 @@ class Contact : Fragment() {
 
         view.website.setOnClickListener {
             var webView: WebView = view.findViewById(R.id.web)
-            
+
             webView.loadUrl("http://www.google.com");
 
-            webView.getSettings().setJavaScriptEnabled(true);
+            webView.settings.javaScriptEnabled = true;
 
             webView.webViewClient = WebViewClient()
 
@@ -51,6 +55,11 @@ class Contact : Fragment() {
 
 
         return view
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+       inflater.inflate(R.menu.menu_main, menu)
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
 }
