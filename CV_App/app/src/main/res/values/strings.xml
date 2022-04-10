@@ -47,7 +47,19 @@ and HTML, JavaScript, CSS, Query, Angular7, and Bootstrap for front-end, and MyS
     <string name="technical_proficiency">Technical Proficiency</string>
     <string name="personal_email"> eunice.n.kamau@outlook.com</string>
     <string name="contact_information">Contact Information</string>
-    <string name="phone_number">+1-(641)-819-1588</string>
+    <string name="phone_number">+1–(641)–819-1588</string>
+    <string name="experiences">Experience</string>
+    <string name="higher_education">Higher Education</string>
+    <string name="masters1">Maharishi International University</string>
+    <string name="master_of_science_computer_science">Master of Science, Computer Science</string>
+    <string name="miu_year">2020 - 2023</string>
+    <string name="tampere_university">Tampere University</string>
+    <string name="msc_IT">Master of Science, Information Technology</string>
+    <string name="tut_year">2014 - 2019</string>
+    <string name="jkuat">Jomo Kenyatta University of Agriculture and Technology</string>
+    <string name="ece_jkuat">Bachelor of Science, Electronic and Computer Engineering</string>
+    <string name="jkuat_year">2004 - 2009</string>
+    <string name="other_certifications">Other Certifications</string>
 
 
 </resources>
