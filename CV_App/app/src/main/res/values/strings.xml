@@ -71,5 +71,8 @@ and HTML, JavaScript, CSS, Query, Angular7, and Bootstrap for front-end, and MyS
     <string name="_2021_present">2021 - present</string>
     <string name="elisa_corporation">Elisa Corporation</string>
 
-
+    <!--Skills -->
+    <string name="add_new_skill">Add new skill</string>
+    <string name="add_new">Add new skill</string>
+    <string name="cancel">Cancel</string>
 </resources>

@@ -15,5 +15,45 @@
         android:textSize="50sp"
         android:background="#0f9d58"/>
 
+    <ListView
+        android:id="@+id/skillsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+    </ListView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_new_skill"
+        android:textColorHint="@color/black"
+        android:src="@drawable/icon_add_skill">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_add_new_skill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_add_new_skill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorAccent"
+        android:text="@string/add_new"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white"/>
+
+<!--    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="@string/cancel"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/white"/>-->
 
 </LinearLayout>

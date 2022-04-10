@@ -1,15 +1,19 @@
 package com.app.cv
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
+import android.widget.ListView
+import android.widget.Toast
+import kotlinx.android.synthetic.main.fragment_skills.view.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val ARG_SKILLS= "skills"
 
 /**
  * A simple [Fragment] subclass.
@@ -18,14 +22,12 @@ private const val ARG_PARAM2 = "param2"
  */
 class Skills : Fragment() {
     // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var skills: ArrayList<String> = mutableListOf("Kotlin", "Fashion design", "Filling tax forms") as ArrayList<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            skills = it.getStringArrayList(ARG_SKILLS) as ArrayList<String>
         }
     }
 
@@ -34,26 +36,26 @@ class Skills : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_skills, container, false)
+        var view: View = inflater.inflate(R.layout.fragment_skills, container, false)
+
+        var listView:ListView = view.findViewById(R.id.skillsView) as ListView
+
+        var listViewAdapter: ArrayAdapter<String> = ArrayAdapter(requireActivity(),
+            android.R.layout.simple_list_item_1,
+            skills)
+
+        view.btn_add_new_skill.setOnClickListener {
+            var skill:String = view.et_add_new_skill.text.toString()
+            Skills().skills.add(skill)
+            listViewAdapter.notifyDataSetChanged()
+            Toast.makeText(requireContext(), "Added into List ${ skill }", Toast.LENGTH_LONG).show()
+        }
+
+        listView.adapter = listViewAdapter
+
+        return view
+
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Skills.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Skills().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
 }
+
