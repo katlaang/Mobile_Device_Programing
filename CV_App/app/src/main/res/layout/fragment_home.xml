@@ -157,7 +157,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/icon_stength"
+                    android:src="@drawable/icon_plus"
                     android:textFontWeight="700"
                     android:textSize="18sp" />
 
@@ -198,7 +198,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/icon_stength" />
+                    android:src="@drawable/icon_plus" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -237,7 +237,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/icon_stength" />
+                    android:src="@drawable/icon_plus" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -322,7 +322,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_gravity="center_vertical"
-                    android:src="@drawable/icon_email" />
+                    android:src="@drawable/icon_mail" />
 
                 <LinearLayout
                     android:layout_width="match_parent"

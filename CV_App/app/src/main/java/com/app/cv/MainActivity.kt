@@ -33,7 +33,8 @@ class MainActivity : AppCompatActivity() {
         viewPagerAdapter.addFragment(Education(), "Education")
         viewPagerAdapter.addFragment(Skills(), "Skills")
         viewPagerAdapter.addFragment(Work(), "Work")
-/*        viewPagerAdapter.addFragment(Hobbies(), "Hobbies")
+/*        If these are added Hobbies opens but the other two won't, so something wrong with fragments
+viewPagerAdapter.addFragment(Hobbies(), "Hobbies")
         viewPagerAdapter.addFragment(References(), "References")
         viewPagerAdapter.addFragment(Contact(), "Contact")*/
 
@@ -66,13 +67,20 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val fmanager=supportFragmentManager
 
+
         return when(item.itemId){
-            R.id.action_contact ->true
-//                fmanager.beginTransaction()
-//                    .replace(R.id.)
-            //R.id.action_contact -> true
+            R.id.action_contact -> fmanager.beginTransaction()
+                .replace(R.id.action_contact, Contact())
+                .commit() > 0
+            R.id.action_hobbies -> fmanager.beginTransaction()
+                .replace(R.id.action_hobbies, Hobbies())
+                .commit() > 0
+            R.id.action_references -> fmanager.beginTransaction()
+                .replace(R.id.action_references, References())
+                .commit() > 0
+/*            R.id.action_contact ->true
             R.id.action_hobbies -> true
-            R.id.action_references -> true
+            R.id.action_references -> true*/
             else -> super.onOptionsItemSelected(item)
         }
 
