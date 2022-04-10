@@ -60,6 +60,16 @@ and HTML, JavaScript, CSS, Query, Angular7, and Bootstrap for front-end, and MyS
     <string name="ece_jkuat">Bachelor of Science, Electronic and Computer Engineering</string>
     <string name="jkuat_year">2004 - 2009</string>
     <string name="other_certifications">Other Certifications</string>
+    <string name="nokia_corporation">Nokia Corporation</string>
+    <string name="emea_nokia">Europe, Middle East and Africa (EMEA)</string>
+    <string name="nokia_year">2009 - 2014</string>
+    <string name="nokia_title">Customer Service Engineer</string>
+    <string name="responsibilities">Responsibilities</string>
+    <string name="northern_trust_corporation">Northern Trust Corporation</string>
+    <string name="chicago_united_states">Chicago, United States</string>
+    <string name="software_engineer">Software Engineer</string>
+    <string name="_2021_present">2021 - present</string>
+    <string name="elisa_corporation">Elisa Corporation</string>
 
 
 </resources>
