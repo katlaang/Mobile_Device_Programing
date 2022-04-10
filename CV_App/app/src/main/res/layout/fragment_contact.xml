@@ -2,7 +2,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:id="@+id/id_contact">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -20,7 +21,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="My Contacts"
+                android:text="@string/my_contacts"
                 android:textColor="#434343"
                 android:textSize="24sp" />
 
