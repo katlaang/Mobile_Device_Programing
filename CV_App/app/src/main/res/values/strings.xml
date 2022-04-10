@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CV App</string>
+    <string name="app_name">My Resume</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
@@ -31,35 +31,23 @@ and HTML, JavaScript, CSS, Query, Angular7, and Bootstrap for front-end, and MyS
     <string name="desc_project_3"> Dynamic web application that auto generate UI using Zend framework </string>
 
     <!-- Contact -->
-    <string name="phone"> +1 (703) 474-6127 </string>
-    <string name="email"> luk.pheakdey@gmail.com </string>
-    <string name="website"> www.lukpheakdey.com </string>
-    <string name="facebook_profile"> facebook/pheakdey.luk/ </string>
-
-    <!-- Home Page -->
-    <string name="honor_award"> Honor &amp; Award </string>
-    <string name="honor_title"> ICCR Scholarship </string>
-    <string name="honor_desc"> Received scholarships from Indian Council for Cultural Relations </string>
-
-    <string name="experience"> Work Experience </string>
-    <string name="experience_year"> Professional 5 years </string>
-    <string name="experience_skill"> Java | PHP | Laravel | Spring boot | Angular7,8 | HTML5 | CSS3 | Bootstrap | MySQL | Node JS | jQuery | REST API </string>
-
-    <string name="blog"> Blog </string>
-    <string name="blog_title"> My Personal Blog </string>
-    <string name="blog_desc"> www.lukpheakdey.blogspot.com </string>
-
     <string name="strength"> Strengths </string>
     <string name="strength_title"> Personal Strength </string>
-    <string name="strength_desc"> I am a fast learner and solve a problem, passion person, flexible person to work in many different business domains as my previous experience has been working in healthcare, accounting, and stock product service.
+    <string name="strength_desc"> I am a fast learner and solve a problem, passion person, flexible person to work in different business domains.
  </string>
-
-    <string name="personal">  Contact </string>
-    <string name="personal_title"> Personal Info </string>
-    <string name="personal_desc"> +1 (703) 474-6127 | luk.pheakdey@gmail.com </string>
     <string name="location">location</string>
     <string name="chicago_illinois_united_states">Chicago, Illinois, United States</string>
     <string name="chicago_illinois">Chicago, Illinois</string>
+    <string name="professional_summary">Professional Summary</string>
+    <string name="summary_description">Diligent software engineer with 5+ years experience in commercial application development. Eager to join an organization to build innovative and cutting edge business solutions for the impressive suite of clients within its global reach. In previous roles, slashed downtime by 25% and ensured 98% on-time project completion. Also identified and dealt with a significant process bottleneck that boosted coding efficiency by 35% when resolved.</string>
+    <string name="analytics">Analytics</string>
+    <string name="communication">Communication</string>
+    <string name="analytics_desc">I am solutions-oriented and proactive at analyzing processes and business requirements as well as feedback to iresove complex business application problems and ensure quality software delivery</string>
+    <string name="communication_desc">Easily communicates in multiple languages orally and in writing with stakeholders. Employ active listening and mediation skills to build consensus</string>
+    <string name="technical_proficiency">Technical Proficiency</string>
+    <string name="personal_email"> eunice.n.kamau@outlook.com</string>
+    <string name="contact_information">Contact Information</string>
+    <string name="phone_number">+1-(641)-819-1588</string>
 
 
 </resources>
