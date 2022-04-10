@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import androidx.annotation.DrawableRes
 import androidx.appcompat.view.menu.MenuBuilder
 import androidx.viewpager.widget.ViewPager
@@ -57,6 +58,23 @@ class MainActivity : AppCompatActivity() {
         if(menu is MenuBuilder) {
             menu.setOptionalIconsVisible(true)
         }
-        return super.onCreateOptionsMenu(menu)
+//        return super.onCreateOptionsMenu(menu)
+
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val fmanager=supportFragmentManager
+
+        return when(item.itemId){
+            R.id.action_contact ->true
+//                fmanager.beginTransaction()
+//                    .replace(R.id.)
+            //R.id.action_contact -> true
+            R.id.action_hobbies -> true
+            R.id.action_references -> true
+            else -> super.onOptionsItemSelected(item)
+        }
+
     }
 }
