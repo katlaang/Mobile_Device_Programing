@@ -46,21 +46,21 @@ class Skills : Fragment() {
             skills)
 
         view.btn_float_add_new_skill.setOnClickListener {
-            val mDialogView = LayoutInflater.from(requireContext()).inflate(R.layout.add_new_skill_layout, null)
-            val mBuilder = AlertDialog.Builder(requireContext()).setView(mDialogView).setTitle("Add Your New Skill")
-            val mAlertDialog = mBuilder.show()
+            val addSkillView = LayoutInflater.from(requireContext()).inflate(R.layout.add_new_skill_layout, null)
+            val addSkillBuilder = AlertDialog.Builder(requireContext()).setView(addSkillView).setTitle("Add new skill")
+            val addSkillAlertDialog = addSkillBuilder.show()
 
 
-            mDialogView.btn_add_new_skill.setOnClickListener {
-                var skill:String = mDialogView.et_add_new_skill.text.toString()
+            addSkillView.btn_add_new_skill.setOnClickListener {
+                var skill:String = addSkillView.et_add_new_skill.text.toString()
                 skills.add(skill)
-                mAlertDialog.dismiss()
+                addSkillAlertDialog.dismiss()
                 listViewAdapter.notifyDataSetChanged()
                 Toast.makeText(requireContext(), "New skill ${ skill } added", Toast.LENGTH_LONG).show()
             }
 
-            mDialogView.btn_cancel.setOnClickListener {
-                mAlertDialog.dismiss()
+            addSkillView.btn_cancel.setOnClickListener {
+                addSkillAlertDialog.dismiss()
                 Toast.makeText(requireContext(), "Adding skill cancelled", Toast.LENGTH_SHORT).show()
             }
         }
