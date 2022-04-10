@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
-    <item
+<!--    <item
         android:id="@+id/action_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -41,31 +41,31 @@
         android:title="Work"
         android:icon="@drawable/icon_work"
         app:showAsAction="never"
+        tools:ignore="HardcodedText"/>-->
+
+    <item
+        android:id="@+id/action_hobbies"
+        android:orderInCategory="1"
+        android:title="Hobbies"
+        android:icon="@drawable/icon_hobbies"
+        app:showAsAction="never"
         tools:ignore="HardcodedText"/>
 
-<!--    <item-->
-<!--        android:id="@+id/action_hobbies"-->
-<!--        android:orderInCategory="5"-->
-<!--        android:title="Hobbies"-->
-<!--        android:icon="@drawable/icon_hobbies"-->
-<!--        app:showAsAction="never"-->
-<!--        tools:ignore="HardcodedText"/>-->
+    <item
+        android:id="@+id/action_contact"
+        android:orderInCategory="2"
+        android:title="Contact Me"
+        android:icon="@drawable/icon_contact"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText"/>
 
-<!--    <item-->
-<!--        android:id="@+id/action_contact"-->
-<!--        android:orderInCategory="6"-->
-<!--        android:title="Contact Me"-->
-<!--        android:icon="@drawable/icon_contact"-->
-<!--        app:showAsAction="never"-->
-<!--        tools:ignore="HardcodedText"/>-->
-
-<!--    <item-->
-<!--        android:id="@+id/action_references"-->
-<!--        android:orderInCategory="7"-->
-<!--        android:title="References"-->
-<!--        android:icon="@drawable/icon_references"-->
-<!--        app:showAsAction="never"-->
-<!--        tools:ignore="HardcodedText"/>-->
+    <item
+        android:id="@+id/action_references"
+        android:orderInCategory="3"
+        android:title="References"
+        android:icon="@drawable/icon_references"
+        app:showAsAction="never"
+        tools:ignore="HardcodedText"/>
 
 
 </menu>
