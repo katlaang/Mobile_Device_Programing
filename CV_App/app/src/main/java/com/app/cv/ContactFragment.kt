@@ -1,21 +1,19 @@
 package com.app.cv
 
 import android.annotation.SuppressLint
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.*
-import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.Toast
+import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.activity_contact.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.add_new_skill_layout.view.*
 import kotlinx.android.synthetic.main.fragment_contact.view.*
 import kotlinx.android.synthetic.main.fragment_skills.view.*
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -43,17 +41,10 @@ class Contact : Fragment() {
         val view: View = inflater.inflate(R.layout.fragment_contact, container, false)
 
         view.website.setOnClickListener {
-            val webView: WebView = view.findViewById(R.id.web)
-
-            webView.loadUrl("https://fi.linkedin.com/in/teemu-myllynen-b0a14283");
-
-            webView.settings.javaScriptEnabled = true;
-
-            webView.webViewClient = WebViewClient()
-
+            val url = "https://fi.linkedin.com/in/teemu-myllynen-b0a14283"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            view.context.startActivity(intent)
         }
-
-
         return view
     }
 
@@ -61,5 +52,4 @@ class Contact : Fragment() {
        inflater.inflate(R.menu.menu_main, menu)
         super.onCreateOptionsMenu(menu, inflater)
     }
-
 }
