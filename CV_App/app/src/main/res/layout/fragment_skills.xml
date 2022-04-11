@@ -27,7 +27,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/experiences"
+        android:text="@string/skills"
         android:textColor="@android:color/darker_gray"
         android:textFontWeight="700"
         android:textSize="24sp" />

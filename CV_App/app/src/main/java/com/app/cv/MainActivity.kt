@@ -2,17 +2,27 @@ package com.app.cv
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.view.menu.MenuBuilder
 import androidx.viewpager.widget.ViewPager
 import kotlinx.android.synthetic.main.activity_main.*
 
+
 class MainActivity : AppCompatActivity() {
 
+    var txtInfo: TextView? = null
+    var btnLogOut: Button? = null
 
+    var shp: SharedPreferences? = null
+    var shpEditor: SharedPreferences.Editor? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +33,16 @@ class MainActivity : AppCompatActivity() {
         setupViewPager(viewPager)
         setUpIcons()
 
+        txtInfo = findViewById(R.id.txtInfo)
+        btnLogOut = findViewById(R.id.btnLogOut)
+        shp = getSharedPreferences("myPreferences", MODE_PRIVATE)
+        CheckLogin()
 
+        btnLogOut?.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                Logout()
+            }
+        })
     }
 
 
@@ -50,6 +69,39 @@ viewPagerAdapter.addFragment(Hobbies(), "Hobbies")
 /*        tabLayout.getTabAt(4)!!.setIcon(R.drawable.icon_hobbies)
         tabLayout.getTabAt(5)!!.setIcon(R.drawable.icon_references)
         tabLayout.getTabAt(6)!!.setIcon(R.drawable.icon_contact)*/
+    }
+
+    private fun  CheckLogin() {
+        if (shp == null)
+            shp = getSharedPreferences("myPreferences", MODE_PRIVATE);
+
+
+        var userName = shp?.getString("name", "");
+
+        if (userName != null && !userName.equals("")) {
+            txtInfo?.setText("Welcome " + userName);
+
+        } else
+        {
+            var loginIntent = Intent(this@MainActivity, Login::class.java);
+            startActivity(loginIntent);
+            finish();
+        }
+    }
+
+
+    fun Logout() {
+        try {
+            if (shp == null) shp = getSharedPreferences("myPreferences", MODE_PRIVATE)
+            shpEditor = shp!!.edit()
+            shpEditor?.putString("name", "")
+            shpEditor?.commit()
+            val i = Intent(this@MainActivity, Login::class.java)
+            startActivity(i)
+            finish()
+        } catch (ex: Exception) {
+            Toast.makeText(this@MainActivity, ex.message.toString(), Toast.LENGTH_LONG).show()
+        }
     }
 
     @SuppressLint("RestrictedApi")
@@ -88,6 +140,8 @@ viewPagerAdapter.addFragment(Hobbies(), "Hobbies")
                 super.onOptionsItemSelected(item)
             }
         }
+
+
 //
 //
 ////          fmanager.beginTransaction()
