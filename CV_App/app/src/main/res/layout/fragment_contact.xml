@@ -45,17 +45,13 @@
                     android:layout_marginLeft="10dp"
                     android:orientation="vertical">
 
-                    <TextView
+                    <Button
+                        android:id="@+id/btn_call_home"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/phone_number"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
-                        android:text="Mobile" />
+                        android:text="@string/my_phone_number"
+                        android:textSize="18sp"
+                        style="?android:attr/borderlessButtonStyle" />
                 </LinearLayout>
             </LinearLayout>
 
