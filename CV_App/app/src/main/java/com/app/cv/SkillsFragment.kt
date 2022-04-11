@@ -37,11 +37,11 @@ class Skills : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var view: View = inflater.inflate(R.layout.fragment_skills, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_skills, container, false)
 
-        var listView:ListView = view.findViewById(R.id.skillsView) as ListView
+        val listView:ListView = view.findViewById(R.id.skillsView) as ListView
 
-        var listViewAdapter: ArrayAdapter<String> = ArrayAdapter(requireActivity(),
+        val listViewAdapter: ArrayAdapter<String> = ArrayAdapter(requireActivity(),
             android.R.layout.simple_list_item_1,
             skills)
 
@@ -52,11 +52,11 @@ class Skills : Fragment() {
 
 
             addSkillView.btn_add_new_skill.setOnClickListener {
-                var skill:String = addSkillView.et_add_new_skill.text.toString()
+                val skill:String = addSkillView.et_add_new_skill.text.toString()
                 skills.add(skill)
                 addSkillAlertDialog.dismiss()
                 listViewAdapter.notifyDataSetChanged()
-                Toast.makeText(requireContext(), "New skill ${ skill } added", Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(), "New skill $skill added", Toast.LENGTH_LONG).show()
             }
 
             addSkillView.btn_cancel.setOnClickListener {
