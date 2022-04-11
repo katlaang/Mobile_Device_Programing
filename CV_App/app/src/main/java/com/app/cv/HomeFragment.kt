@@ -70,4 +70,4 @@ class HomeFragment : Fragment() {
     }
 
 
-    }
+}

@@ -1,5 +1,6 @@
 package com.app.cv
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
@@ -17,6 +18,7 @@ class Login : AppCompatActivity() {
     var edtPassword: EditText? = null
     var btnLogin: Button? = null
     var txtInfo: TextView? = null
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_login)
@@ -27,17 +29,17 @@ class Login : AppCompatActivity() {
         btnLogin = findViewById(R.id.btnLogin)
         txtInfo = findViewById(R.id.txtInfo)
         shp = getSharedPreferences("myPreferences", MODE_PRIVATE)
-        CheckLogin()
-        btnLogin?.setOnClickListener(View.OnClickListener {
-            if (edtUserId?.getText().toString() == "" || edtPassword?.getText()
+        checkLogin()
+        btnLogin?.setOnClickListener {
+            if (edtUserId?.text.toString() == "" || edtPassword?.text
                     .toString() == ""
-            ) txtInfo?.setText("Please insert userid and password") else DoLogin(
-                edtUserId?.getText().toString(), edtPassword?.getText().toString()
+            ) txtInfo?.text = "Please insert userid and password" else doLogin(
+                edtUserId?.text.toString(), edtPassword?.text.toString()
             )
-        })
+        }
     }
 
-    fun CheckLogin() {
+    private fun checkLogin() {
         if (shp == null) shp = getSharedPreferences("myPreferences", MODE_PRIVATE)
         val userName = shp!!.getString("admin", "")
         if (userName != null && userName != "") {
@@ -47,7 +49,8 @@ class Login : AppCompatActivity() {
         }
     }
 
-    fun DoLogin(userid: String?, password: String) {
+    @SuppressLint("SetTextI18n")
+    private fun doLogin(userid: String?, password: String) {
         try {
             if (password == "admin") {
                 if (shp == null) shp = getSharedPreferences("myPreferences", MODE_PRIVATE)
@@ -57,7 +60,7 @@ class Login : AppCompatActivity() {
                 val i = Intent(this@Login, MainActivity::class.java)
                 startActivity(i)
                 finish()
-            } else txtInfo!!.text = "Invalid Credentails"
+            } else txtInfo!!.text = "Invalid Credentials"
         } catch (ex: Exception) {
             txtInfo!!.text = ex.message.toString()
         }

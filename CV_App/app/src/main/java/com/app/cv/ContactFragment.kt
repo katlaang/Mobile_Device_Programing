@@ -49,15 +49,15 @@ class Contact : Fragment() {
         btnFragments.setOnClickListener { call() }
 
         view.website.setOnClickListener {
-            val url = "https://fi.linkedin.com/in/teemu-myllynen-b0a14283"
+            val url = "https://www.linkedin.com/in/eunice-nduta-kamau?trk=people-guest_people_search-card"
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
             view.context.startActivity(intent)
         }
         return view
     }
 
-    fun call() {
-        val num = "+16418191588"
+    private fun call() {
+       // val num = "+16418191588"
         if (ContextCompat.checkSelfPermission(
                 requireContext(),
                 Manifest.permission.CALL_PHONE

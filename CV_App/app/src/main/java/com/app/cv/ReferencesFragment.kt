@@ -2,21 +2,11 @@
 
 package com.app.cv
 
-import android.content.Intent
-import android.content.pm.PackageManager
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.OnClickListener
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.Toast
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
-import kotlinx.android.synthetic.main.fragment_references.*
-import java.util.jar.Manifest
 
 class References : Fragment() {
 
@@ -35,8 +25,7 @@ class References : Fragment() {
 //        intent.data = Uri.parse("tel:123 456789")
 //        startActivity(intent)
 
-        val view: View = inflater.inflate(R.layout.fragment_references, container, false)
-        return view
+        return inflater.inflate(R.layout.fragment_references, container, false)
     }
     
 }

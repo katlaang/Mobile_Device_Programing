@@ -6,7 +6,6 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -36,13 +35,11 @@ class MainActivity : AppCompatActivity() {
         txtInfo = findViewById(R.id.txtInfo)
         btnLogOut = findViewById(R.id.btnLogOut)
         shp = getSharedPreferences("myPreferences", MODE_PRIVATE)
-        CheckLogin()
+        checkLogin()
 
-        btnLogOut?.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(v: View?) {
-                Logout()
-            }
-        })
+        btnLogOut?.setOnClickListener {
+            logout()
+        }
     }
 
 
@@ -71,26 +68,27 @@ viewPagerAdapter.addFragment(Hobbies(), "Hobbies")
         tabLayout.getTabAt(6)!!.setIcon(R.drawable.icon_contact)*/
     }
 
-    private fun  CheckLogin() {
+    @SuppressLint("SetTextI18n")
+    private fun  checkLogin() {
         if (shp == null)
             shp = getSharedPreferences("myPreferences", MODE_PRIVATE);
 
 
-        var userName = shp?.getString("name", "");
+        val userName = shp?.getString("name", "");
 
-        if (userName != null && !userName.equals("")) {
-            txtInfo?.setText("Welcome " + userName);
+        if (userName != null && userName != "") {
+            txtInfo?.text = "Welcome $userName"
 
         } else
         {
-            var loginIntent = Intent(this@MainActivity, Login::class.java);
+            val loginIntent = Intent(this@MainActivity, Login::class.java);
             startActivity(loginIntent);
             finish();
         }
     }
 
 
-    fun Logout() {
+    private fun logout() {
         try {
             if (shp == null) shp = getSharedPreferences("myPreferences", MODE_PRIVATE)
             shpEditor = shp!!.edit()
