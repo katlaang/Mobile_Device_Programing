@@ -70,4 +70,6 @@
    <string name="road_tripping">Road Tripping</string>
    <string name="running">Running</string>
    <string name="more_references_provided_upon_request">More references provided upon request</string>
+   <string name="phone_dial_button">phone dial button</string>
+   <string name="my_phone_number">+1 (641) 819-1588</string>
 </resources>
