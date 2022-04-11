@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         viewPagerAdapter.addFragment(HomeFragment(), "Home")
         viewPagerAdapter.addFragment(Education(), "Education")
         viewPagerAdapter.addFragment(Skills(), "Skills")
-        viewPagerAdapter.addFragment(Work(), "Work")
+        viewPagerAdapter.addFragment(Work(), "Work.kt")
 /*        If these are added Hobbies opens but the other two won't, so something wrong with fragments
 viewPagerAdapter.addFragment(Hobbies(), "Hobbies")
         viewPagerAdapter.addFragment(References(), "References")

@@ -13,7 +13,7 @@ class ContactActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_contact)
         setSupportActionBar(toolbar_contact)
-        toolbar_contact.setTitle("Contact Me")
+        toolbar_contact.title
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }

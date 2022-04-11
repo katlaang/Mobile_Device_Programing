@@ -11,7 +11,7 @@
         android:layout_marginBottom="10dp"
         android:background="#ddd"
         android:orientation="vertical"
-        tools:context=".Work">
+        tools:context=".`Fragment.kt`">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"

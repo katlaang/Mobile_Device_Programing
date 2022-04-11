@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orderInCategory="4"
-            android:title="Work"
+            android:title="``WorkFragment.kt``"
             android:icon="@drawable/icon_work"
             app:showAsAction="never"
             tools:ignore="HardcodedText"/>

@@ -40,10 +40,10 @@ class Contact : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var view: View = inflater.inflate(R.layout.fragment_contact, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_contact, container, false)
 
         view.website.setOnClickListener {
-            var webView: WebView = view.findViewById(R.id.web)
+            val webView: WebView = view.findViewById(R.id.web)
 
             webView.loadUrl("https://fi.linkedin.com/in/teemu-myllynen-b0a14283");
 

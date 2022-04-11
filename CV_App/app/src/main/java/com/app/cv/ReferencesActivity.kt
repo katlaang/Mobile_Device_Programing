@@ -11,7 +11,7 @@ class ReferencesActivity : AppCompatActivity() {
         setContentView(R.layout.activity_references)
 
         setSupportActionBar(toolbar_ref)
-        toolbar_ref.setTitle("References")
+        toolbar_ref.title
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
