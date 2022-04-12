@@ -12,17 +12,10 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.add_new_skill_layout.view.*
 import kotlinx.android.synthetic.main.fragment_skills.view.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_SKILLS= "skills"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Skills.newInstance] factory method to
- * create an instance of this fragment.
- */
+
 class Skills : Fragment() {
-    // TODO: Rename and change types of parameters
     private var skills: ArrayList<String> = mutableListOf("Kotlin", "Fashion design", "Filling tax forms") as ArrayList<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
