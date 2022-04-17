@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.app.quiz.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/homeFragment_to_quizFragment"
+            app:destination="@id/quizFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <argument
+            android:name="category"
+            app:argType="integer"
+            android:defaultValue="100" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.app.quiz.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz">
+        <action
+            android:id="@+id/quizFragment_to_questionFragment"
+            app:destination="@id/questionFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/homeFragment2"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.app.quiz.QuestionFragment"
+        android:label="fragment_question"
+        tools:layout="@layout/fragment_question">
+        <action
+            android:id="@+id/questionFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/homeFragment3"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.app.quiz.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/resultFragment_to_resultAnalysisFragment"
+            app:destination="@id/resultAnalysisFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/homeFragment4"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultAnalysisFragment"
+        android:name="com.app.quiz.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result">
+        <action
+            android:id="@+id/resultAnalysisFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+</navigation>
