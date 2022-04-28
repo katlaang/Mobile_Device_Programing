@@ -10,7 +10,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.app.cv"
+        applicationId "com.app.quiz"
         minSdk 28
         targetSdk 32
         versionCode 1

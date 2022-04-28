@@ -12,5 +12,9 @@
     <string name="analysis">Result analysis</string>
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="categories">Categories</string>
+    <string name="c">C#</string>
+    <string name="kotlin">Kotlin</string>
+    <string name="database">Database</string>
 
 </resources>
