@@ -1,64 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
-    android:background="#ddd"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <androidx.cardview.widget.CardView
+    <TextView
+        android:id="@+id/question_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:foreground="?android:attr/selectableItemBackground"
-        app:cardUseCompatPadding="true"
-        app:contentPadding="10dp">
+        android:layout_margin="15dp"
+        android:textSize="20sp" />
 
-        <LinearLayout
+    <RadioGroup
+        android:id="@+id/answer_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <RadioButton
+            android:id="@+id/answer_1_radio_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:textSize="18sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <!-- TextVIew to display the passed text -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/question"
-                    android:textColor="@android:color/darker_gray"
-                    android:textFontWeight="700"
-                    android:textSize="24sp" />
-            </LinearLayout>
-            <ListView
-                android:id="@+id/answersView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                >
+        <RadioButton
+            android:id="@+id/answer_2_radio_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
 
-            </ListView>
-            
-            <Button
-                android:id="@+id/btnNext"
-                android:layout_width="wrap_content"
-                android:layout_height="85px"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                android:background="#1976D2"
-                android:text="@+string/next"
-                android:textColor="#fff" />
+        <RadioButton
+            android:id="@+id/answer_3_radio_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+        <RadioButton
+            android:id="@+id/answer_4_radio_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+    </RadioGroup>
 
-            <Button
-                android:id="@+id/btnHome"
-                android:layout_width="wrap_content"
-                android:layout_height="85px"
-                android:layout_gravity="center"
-                android:layout_margin="5dp"
-                android:background="#1976D2"
-                android:text="@+string/home"
-                android:textColor="#fff" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:onClick="nextButtonClicked"
+        android:text="Next"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/home_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:onClick="homeButtonClicked"
+        android:text="Home"
+        />
+
 </LinearLayout>
