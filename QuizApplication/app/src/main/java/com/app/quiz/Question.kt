@@ -1,0 +1,9 @@
+package com.app.quiz
+
+data class Question(
+    val question: String,
+    val answer1: String,
+    val answer2: String,
+    val answer3: String,
+    val correctAnswer: Int
+)

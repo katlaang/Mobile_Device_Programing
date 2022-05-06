@@ -29,18 +29,9 @@ class QuizFragment : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_quiz, container, false)
         view.kotlin.setOnClickListener {
-            val action = QuizFragmentDirections.quizFragmentToQuestionFragment("kotlin")
+            val action = QuizFragmentDirections.quizFragmentToQuestionFragment(0)
             Navigation.findNavController(view).navigate(action)
         }
-        view.c.setOnClickListener {
-            val action = QuizFragmentDirections.quizFragmentToQuestionFragment("c")
-            Navigation.findNavController(view).navigate(action)
-        }
-        view.database.setOnClickListener {
-            val action = QuizFragmentDirections.quizFragmentToQuestionFragment("database")
-            Navigation.findNavController(view).navigate(action)
-        }
-
 
 
         return view
