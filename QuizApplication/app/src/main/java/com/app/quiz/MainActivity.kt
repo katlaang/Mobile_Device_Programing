@@ -1,6 +1,8 @@
 package com.app.quiz
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -18,5 +20,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp()
+    }
+
+    fun takeQuiz(view: View) {
+        val intent = Intent(this, QuizActivity::class.java)
+        startActivity(Intent(intent))
     }
 }

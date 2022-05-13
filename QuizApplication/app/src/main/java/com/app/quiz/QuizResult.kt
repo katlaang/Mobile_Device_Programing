@@ -4,7 +4,7 @@ import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
-data class QuestionResult(val question: String, val selectedAnswer: String, val correctAnswer: String) :
+data class QuizResult(val question: String, val selectedAnswer: String, val correctAnswer: String) :
     Parcelable {
 
     constructor(question: Question, selectedAnswer: String) : this(

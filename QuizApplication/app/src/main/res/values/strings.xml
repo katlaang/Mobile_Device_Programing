@@ -16,5 +16,6 @@
     <string name="c">C#</string>
     <string name="kotlin">Kotlin</string>
     <string name="database">Database</string>
+    <string name="home">Home</string>
 
 </resources>

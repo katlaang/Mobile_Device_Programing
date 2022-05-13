@@ -13,59 +13,30 @@
         android:foreground="?android:attr/selectableItemBackground"
         >
 
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <!-- TextVIew to display the passed text -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/categories"
-                    android:textColor="@android:color/darker_gray"
-                    android:textFontWeight="700"
-                    android:textSize="24sp" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <Button
-                    android:id="@+id/kotlin"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_gravity="center"
-                    android:background="@color/colorPrimary"
-                    android:text="@string/kotlin"
-                    android:layout_marginBottom="20dp"
-                    android:textColor="@color/white"/>
-                <Button
-                    android:id="@+id/c"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_gravity="center"
-                    android:background="@color/colorPrimary"
-                    android:text="@string/c"
-                    android:layout_marginBottom="20dp"
-                    android:textColor="@color/white"/>
-                <Button
-                    android:id="@+id/database"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_gravity="center"
-                    android:background="@color/colorPrimary"
-                    android:text="@string/database"
-                    android:layout_marginBottom="20dp"
-                    android:textColor="@color/white"/>
-            </LinearLayout>
-        </LinearLayout>
+            android:textStyle="bold"
+            android:textFontWeight="12"
+            android:text="Click the following button if you want to take quiz."/>
+        <Button
+            android:id="@+id/takequiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:onClick="takeQuiz"
+            android:text="Go for Quiz" />
+        <Button
+            android:id="@+id/home_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:text="@string/home"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white"/>
     </androidx.cardview.widget.CardView>
 
 </androidx.core.widget.NestedScrollView>

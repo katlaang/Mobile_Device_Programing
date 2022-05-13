@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import kotlinx.android.synthetic.main.activity_quiz.view.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 import kotlinx.android.synthetic.main.fragment_quiz.view.*
 
@@ -28,11 +29,6 @@ class QuizFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_quiz, container, false)
-        view.kotlin.setOnClickListener {
-            val action = QuizFragmentDirections.quizFragmentToQuestionFragment(0)
-            Navigation.findNavController(view).navigate(action)
-        }
-
 
         return view
     }

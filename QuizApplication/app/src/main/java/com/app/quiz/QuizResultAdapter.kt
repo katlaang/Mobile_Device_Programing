@@ -7,12 +7,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class QuestionResultAdapter(private val quizResults: ArrayList<QuestionResult>) :
+class QuizResultAdapter(private val quizResults: ArrayList<QuizResult>) :
     RecyclerView.Adapter<QuizResultAdapter.QuizResultViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QuizResultViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.question_result_row_item, parent, false)
+        val view = inflater.inflate(R.layout.quiz_result_row_item, parent, false)
         return QuizResultViewHolder(view)
     }
 
@@ -31,7 +31,7 @@ class QuestionResultAdapter(private val quizResults: ArrayList<QuestionResult>) 
         private val correctAnswerTextView: TextView =
             view.findViewById(R.id.correct_answer_text_view)
 
-        fun configure(quizResult: QuestionResult, position: Int) {
+        fun configure(quizResult: QuizResult, position: Int) {
             questionTextView.text = quizResult.question
             selectedAnswerTextView.text = "Your answer: ${quizResult.selectedAnswer}"
             correctAnswerTextView.text = "Correct answer: ${quizResult.correctAnswer}"
