@@ -18,7 +18,7 @@ class HomeFragment : Fragment()  {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         view.start_quiz.setOnClickListener {
-            val action = HomeFragmentDirections.homeFragmentToQuizFragment(0)
+            val action = HomeFragmentDirections.homeFragmentToQuizFragment()
             Navigation.findNavController(view).navigate(action)
         }
         return view

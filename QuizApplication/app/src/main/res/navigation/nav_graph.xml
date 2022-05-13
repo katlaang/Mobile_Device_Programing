@@ -26,9 +26,6 @@
             app:destination="@id/resultFragment"
             app:enterAnim="@android:anim/slide_in_left"
             app:exitAnim="@android:anim/slide_out_right" />
-        <argument
-            android:name="questionIndex"
-            app:argType="integer" />
         <action
             android:id="@+id/quizFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
