@@ -1,6 +1,7 @@
-package com.app.quiz
+package com.app.quiz.entity
 
 import android.os.Parcelable
+import com.app.quiz.entity.Question
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize

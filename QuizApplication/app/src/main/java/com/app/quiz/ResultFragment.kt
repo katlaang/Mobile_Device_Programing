@@ -1,56 +1,54 @@
 package com.app.quiz
 
-import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 
-import kotlinx.android.synthetic.main.activity_quiz_result.*
+import kotlinx.android.synthetic.main.fragment_result.view.*
 
-class ResultFragment : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_result)
-        setupUI()
-    }
+class ResultFragment : BaseFragment() {
 
-    override fun onSupportNavigateUp(): Boolean {
-        setResult(Activity.RESULT_OK)
-        finish()
-        return super.onSupportNavigateUp()
-    }
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_result, container, false)
 
-    private fun setupUI() {
-
-        val result = intent.getParcelableArrayListExtra<QuizResult>("result")
-        if (result != null) {
-            val totalQuestions = result.size
-            var correctAnswers = 0
-            result.forEach {
-                if (it.selectedAnswer == it.correctAnswer) {
-                    correctAnswers++
-                }
+        var bundle = arguments
+        if (bundle == null) {
+            Log.e("Result", "ResultFragment did not receive answers")
+            return view
+        }
+        val args = ResultFragmentArgs.fromBundle(bundle)
+        val result = args.answers
+        val totalQuestions = result?.size
+        var correctAnswers = 0
+        result?.forEach {
+            if (it.selectedAnswer == it.correctAnswer) {
+                correctAnswers++
             }
-            total_questions_text_view.text = "Total questions: $totalQuestions"
-            correct_answers_text_view.text = "Correct answers: $correctAnswers"
-            wrong_answers_text_view.text = "Wrong answers: ${totalQuestions - correctAnswers}"
-            score_text_view.text = "Your score is: $correctAnswers / $totalQuestions"
         }
-    }
+        view.total_questions_text_view.text = "Total questions: $totalQuestions"
+        view.correct_answers_text_view.text = "Correct answers: $correctAnswers"
+        view.wrong_answers_text_view.text = "Wrong answers: ${totalQuestions?.minus(correctAnswers)}"
+        view.score_text_view.text = "Your score is: $correctAnswers / $totalQuestions"
 
-    fun tryAgainButtonClicked(view: View) {
-        setResult(Activity.RESULT_OK)
-        finish()
-    }
-
-    fun resultAnalysisButtonClicked(view: View) {
-        val answers = intent.getParcelableArrayListExtra<QuizResult>("result")
-        val intent = Intent(this, QuestionResultAnalysisActivity::class.java)
-        if (answers != null) {
-            intent.putParcelableArrayListExtra("result", answers)
+        view.try_again_button.setOnClickListener {
+            val action = ResultFragmentDirections.resultFragmentToQuizFragment()
+            Navigation.findNavController(view).navigate(action)
         }
-        startActivity(intent)
+
+        view.analysis_button.setOnClickListener {
+            val action = ResultFragmentDirections.resultFragmentToAnalysisFragment(args.answers)
+            Navigation.findNavController(view).navigate(action)
+        }
+        return view
     }
 }
+
+

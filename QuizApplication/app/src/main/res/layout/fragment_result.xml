@@ -52,18 +52,17 @@
         android:id="@+id/try_again_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:onClick="tryAgainButtonClicked"
         android:text="try again"
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/result_analysis_button"
+        android:id="@+id/analysis_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
 
-        android:onClick="resultAnalysisButtonClicked"
+        android:onClick="analysisButtonClicked"
         android:text="result analysis"
         />
 

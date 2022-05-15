@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Quiz Application</string>
     <string name="register">Register</string>
+    <string name="quiz_description">This quiz will test basic knowledge about Android. You can retake the quiz as many times as you want.</string>
+    <string name="start_quiz_description">Click the following button to start the quiz.</string>
     <string name="start_quiz">Start Quiz</string>
     <string name="total_questions">Total Questions :</string>
     <string name="correct_answers">Correct Answers(Score) :</string>
@@ -10,7 +12,7 @@
     <string name="accept">Accept</string>
     <string name="question">Question</string>
     <string name="analysis">Result analysis</string>
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="categories">Categories</string>
     <string name="c">C#</string>
